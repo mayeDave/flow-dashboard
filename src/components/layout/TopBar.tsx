@@ -6,10 +6,15 @@ import {
 } from "react-icons/md";
 
 import { useAppStore } from "../../store/useAppStore";
+import { useLocation } from "react-router-dom";
 
 export default function TopBar() {
   const user = useAppStore((s) => s.user);
   const openSidebar = useAppStore((s) => s.openSidebar);
+
+  // i want the title to be dynamic based on the route, so i will use useLocation from react-router-dom to get the current path and then set the title accordingly
+  const location = useLocation();
+  const title = location.pathname.split("/").pop()?.replace("-", " ") || "Dashboard";
 
   return (
     <header className="bg-white">
@@ -19,7 +24,7 @@ export default function TopBar() {
 
         {/* Title */}
         <h1 className="text-2xl font-semibold text-slate-700">
-          Overview
+          {title.charAt(0).toUpperCase() + title.slice(1)}
         </h1>
 
         {/* Right */}
