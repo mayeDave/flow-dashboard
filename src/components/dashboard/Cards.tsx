@@ -11,6 +11,7 @@ function BankCard({ dark }: Props) {
         relative
         h-48
         w-full
+        max-w-full
         rounded-2xl
         overflow-hidden
         shadow-lg
@@ -155,10 +156,10 @@ export default function Cards() {
         snap-x
         snap-mandatory
 
-        sm:grid
-        sm:grid-cols-2
-        sm:overflow-visible
-        sm:snap-none
+        lg:grid
+        lg:grid-cols-2
+        lg:overflow-visible
+        lg:snap-none
       "
     >
 

@@ -16,7 +16,7 @@ export default function DashboardPage() {
         <section className="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
           {/* LEFT: CARDS */}
-          <div className="lg:col-span-2 space-y-4">
+          <div className="col-span-1 lg:col-span-2 overflow-hidden">
 
             {/* Cards Header */}
             <div className="flex items-center justify-between">
@@ -34,7 +34,7 @@ export default function DashboardPage() {
           </div>
 
           {/* RIGHT: TRANSACTIONS */}
-          <div className="space-y-4">
+          <div >
 
             {/* Transactions Header */}
             <h2 className="text-base md:text-lg font-semibold text-slate-800">
