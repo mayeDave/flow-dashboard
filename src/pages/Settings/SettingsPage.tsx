@@ -13,10 +13,6 @@ export default function SettingsPage() {
 
       <div className="space-y-6">
 
-        {/* Page Title */}
-        <h1 className="text-2xl font-semibold text-slate-800">
-          Setting
-        </h1>
 
         {/* Main Card */}
         <div className="bg-white rounded-2xl shadow-sm p-6 md:p-8">
