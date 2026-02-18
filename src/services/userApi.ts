@@ -3,11 +3,8 @@ import type { UserProfile } from "../types/user";
 export async function updateProfile(
   data: UserProfile
 ): Promise<UserProfile> {
-
   return new Promise((resolve, reject) => {
-
     setTimeout(() => {
-
       // Simulate random failure (20%)
       if (Math.random() < 0.2) {
         reject(new Error("Network error"));
@@ -15,8 +12,6 @@ export async function updateProfile(
       }
 
       resolve(data);
-
     }, 1500);
-
   });
 }
