@@ -1,73 +1,222 @@
-# React + TypeScript + Vite
+# Flow Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive financial dashboard built with React, TypeScript, and Vite.  
+Designed from a Figma UI and implemented using scalable frontend architecture.
 
-Currently, two official plugins are available:
+Live Demo: https://flow-dashboard-omega.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📌 Project Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Flow Dashboard is a web-based financial management interface that displays user cards, transactions, analytics, and profile settings.  
+It follows modern UI/UX patterns used in fintech applications and is fully responsive across devices.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- React (Vite)
+- TypeScript (Strict Mode)
+- React Router DOM
+- React Query (Server State Management)
+- Zustand (Global State Management)
+- TailwindCSS (Styling)
+- Material UI (UI Components)
+- Axios (HTTP Requests)
+- React Hot Toast (Notifications)
+- Vercel (Deployment)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ✨ Features
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Dashboard
+- Credit cards display (horizontal scroll on mobile)
+- Recent transactions list
+- Weekly activity chart
+- Expense statistics
+- Quick transfer section
+- Balance history
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Settings Page
+- Editable user profile form
+- API simulation with React Query
+- Loading and error handling
+- Toast notifications
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Global Functionality
+- Centralized API handling
+- Global error management
+- Responsive navigation
+- Mobile sidebar drawer
+- Strict TypeScript typing
+
+---
+
+## 🧠 Architecture
+
+- Modular and scalable folder structure
+- Reusable UI components
+- Feature-based separation
+- Type-safe API services
+- Global state via Zustand
+- Cached server state via React Query
+
+---
+
+## 📁 Project Structure
+
+src/
+├ components/
+│ ├ layout/
+│ ├ dashboard/
+│ └ ui/
+│
+├ pages/
+│ ├ dashboard/
+│ └ settings/
+│
+├ hooks/
+├ services/
+├ store/
+├ types/
+├ lib/
+└ main.tsx
+
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/flow-dashboard.git
+cd flow-dashboard
+
+
+2. Install Dependencies
+npm install
+
+3. Run Development Server
+npm run dev
+
+
+Application will be available at:
+
+http://localhost:5173
+
+🏗️ Build for Production
+npm run build
+
+
+Preview build locally:
+
+npm run preview
+
+🌍 Deployment
+
+This project is deployed on Vercel.
+
+Deployment Steps
+
+Push project to GitHub
+
+Import repository on Vercel
+
+Configure build settings:
+
+Build Command: npm run build
+Output Directory: dist
+
+
+Add SPA rewrite configuration:
+
+Create vercel.json:
+
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+
+🔄 API & Data Handling
+
+Axios instance with interceptors
+
+Global error handling
+
+React Query for caching and retries
+
+Mock API for profile update
+
+📱 Responsiveness
+
+Optimized for:
+
+Mobile devices
+
+Tablets
+
+Desktop screens
+
+Uses Tailwind breakpoints and adaptive layouts.
+
+🎯 Future Enhancements
+
+Authentication system
+
+Dark mode toggle
+
+Backend integration
+
+Unit testing
+
+Performance optimization
+
+👤 Author
+
+Developed by [Your Name]
+
+GitHub: https://github.com/YOUR_USERNAME
+
+
+---
+
+## ✅ WHAT TO EDIT
+
+Before committing, replace:
+
+
+
+YOUR_USERNAME
+[Your Name]
+
+
+With your real GitHub username and name.
+
+---
+
+## 🏆 Result
+
+After adding this README, your repo will look:
+
+✔ Professional  
+✔ Recruiter-friendly  
+✔ Well-documented  
+✔ Submission-ready  
+
+---
+
+If you want, I can next help you:
+
+👉 Optimize your GitHub profile to match this project  
+👉 Prepare interview explanations for this dashboard  
+👉 Improve commit history
+
+Just tell me. 💪
+
