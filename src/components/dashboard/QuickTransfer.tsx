@@ -57,7 +57,8 @@ export default function QuickTransfer() {
         />
 
         <button className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
-          Send
+        {/* send should not show on small screen, only show the icon, on medium and above show both text and icon */}
+        <span className="hidden md:inline">Send</span>
           <MdSend />
         </button>
 
